@@ -64,7 +64,7 @@ func TestSolidWallEndsGame(t *testing.T) {
 func TestWrapModeTeleports(t *testing.T) {
 	game := NewGame(Config{Width: 8, Height: 8, Walls: WallsWrap, Seed: 2, BaseSpeedMS: 80})
 	startX := game.snake[0].X
-	for i := 0; i < startX + 1; i++ {
+	for i := 0; i < startX+1; i++ {
 		game.SetDir(DirLeft)
 		game.Step()
 		if game.State != StateRunning {
